@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finaliza Pro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div>
+      <div class="brand">⚽ Finaliza Pro</div>
+      <div class="subtitle">Finalizações + Gols • Método PRO</div>
+    </div>
+    <button id="themeBtn" class="ghost">☀️</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <h1>Análise rápida de jogos</h1>
+        <p>Compare finalizações, gols, casa/fora e consistência para encontrar linhas interessantes.</p>
+      </div>
+      <button class="primary" onclick="loadDemo()">Carregar exemplo</button>
+    </section>
+
+    <section class="card">
+      <h2>Pesquisar jogo</h2>
+      <div class="grid search-grid">
+        <label>Time da casa<input id="home" placeholder="Ex.: Coritiba"></label>
+        <label>Time visitante<input id="away" placeholder="Ex.: Mirassol"></label>
+        <button class="primary action" onclick="analyze()">Analisar</button>
+      </div>
+    </section>
+
+    <section id="result" class="hidden"></section>
+
+    <section class="card">
+      <h2>Como o score é calculado</h2>
+      <div class="rules">
+        <div><b>🎯 Finalizações</b><span>peso maior para média, consistência e mando</span></div>
+        <div><b>⚽ Gols</b><span>usa gols marcados/sofridos e frequência de Over</span></div>
+        <div><b>🤝 H2H</b><span>entra como fator complementar, não como base única</span></div>
+        <div><b>🔥 PRO</b><span>combina os fatores e classifica: Alta / Média / Baixa</span></div>
+      </div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
